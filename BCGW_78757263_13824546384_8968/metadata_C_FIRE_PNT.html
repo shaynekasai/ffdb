@@ -1,0 +1,1046 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+    	<base href="https://apps.gov.bc.ca/pub/geometadata/"  />
+        <title>
+
+            
+            
+                
+                
+			    DataBC Geo: 
+                    Fire Locations - Current
+                
+            
+
+            
+            
+        </title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+        
+        
+            
+            
+                <meta name="description" content="Wildfire location points for the current fire season.  Supplied through various sources. Not to be used for legal purposes. This data may not reflect the most current fire situation.  The data is refreshed nightly however individual fire update frequency will vary.     These points are rolled over to Historical Fire Points on April 1 of each year" />
+            
+        
+
+        
+        
+         
+
+        <script>
+            //var imagesRoot = "../../images";
+            var imagesRoot = "images";
+            var jspRoot = "jsp";
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style_discovery.css">
+        <link rel="stylesheet" type="text/css" href="css/style_tooltip.css">
+	    <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" media="all" />
+	    
+        
+        <script type="text/javascript" src="js/utility.js">;</script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/advancedSearch.js"></script>
+        <script type="text/javascript" src="js/jquery.xslt.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $(".btn-slide").click(function(){
+                    var id = $(this).attr('id');
+                    var row = "#details" + id;
+                    $(row).slideToggle("slow");
+	  
+                });
+
+            });
+        </script>
+    </head>
+    
+    <body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="scrollToPosition()">
+        <!--<IFRAME id="tooltiphelper" style="DISPLAY: none; LEFT: 0px; POSITION: absolute; TOP: 0px" src="javascript:false;" frameBorder="0" scrolling="no"></IFRAME>-->
+        <IFRAME id="tooltiphelper" style="filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);width: 0px;height: 0px;DISPLAY: none; LEFT: -1000px; POSITION: absolute; TOP: 0px" src="" frameBorder="0" scrolling="no"></IFRAME>
+        <DIV style="z-index: 5; height: auto"id=dhtmltooltip></DIV>
+        <script type="text/javascript" src="js/tooltip.js">;</script>
+        <div align="center">
+
+            <table width="760" height="100%" cellspacing="0" cellpadding="0" border="0">
+
+                <!-- header -->
+                <tr height="0">
+                    <td height="0" colspan="2">
+                        
+
+
+
+
+<!-- HEADER tile  -->
+
+<table width="760" border="0" cellspacing="0" cellpadding="0" border="1">
+	<tr>
+		<td width="164"></td>
+		<td width="1"><img
+			src="images/nav/spacer.gif"
+			width="1" height="15"></td>
+		<td><img
+			src="images/nav/spacer.gif"
+			width="100%" height="1"></td>
+	</tr>
+	<tr>
+		<td width="164">
+		    <a href="http://www2.gov.bc.ca">
+		    <img
+			src="images/nav/BCID_H_rgb_pos.jpg" border="0"
+			width="164" alt="British Columbia Government Crest"></a></td>
+		<td
+			background="images/nav/greyline_pixel.gif"
+			width="1"><img
+			src="images/nav/spacer.gif"
+			width="1" height="46"></td>
+		<td width="656">
+		    <a href="http://www.data.gov.bc.ca">
+			<img src="images/databc_banner.jpg" width="656" border="0" /></a>
+		</td>
+	</tr>
+</table>
+<!-- HEADER tile end -->
+
+                    </td>
+                </tr>
+
+                <tr height="0">
+
+                    <!-- left-side panel -->
+                    <td height="100%">
+                        <table height="100%" cellspacing="0" cellpadding="0" border="0">
+
+                            <!-- service -->
+                            <tr height="0">
+                                <td height="0">
+                                    
+
+
+
+<!-- SERVICE tile sample -->
+
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999">
+
+
+    <tr> 
+      <td>
+
+        <table width="164" border="0" cellspacing="0" cellpadding="0" bgcolor="#6699CC">
+          <tr> 
+            <td colspan="2"><img src="images/nav/nBlueTop2.gif" alt="" width="164" height="6"></td>
+          </tr>
+          <tr> 
+            <td><img src="images/spacer.gif" alt="" width="15" height="26"></td>
+            <td width="149" height="26" class="navThemesOn"><a href="http://www.gov.bc.ca/" class="navThemes" title="Government of British Columbia">Government of British Columbia</a></td>
+          </tr>
+          <tr> 
+            <td><img src="images/spacer.gif" alt="" width="15" height="1"></td>
+            <td width="149"><img src="images/nav/ln_dot_textnav.gif" alt="" width="149" height="1"></td>
+          </tr>
+       </table>
+     </td>
+    </tr>
+
+
+    <tr>
+        <td>
+                    
+            <!-- PROGRAM NAV START //-->
+            <table width="164" border="0" cellspacing="0" cellpadding="0" bgcolor="#6699CC">
+              <tr> 
+                <td colspan="2" valign="top" class="leftnavBody"><img src="images/nav/spacer.gif" alt="" width="15" height="15"></td>
+              </tr>
+
+
+                <!-- service tile item: Ministry of Sustainable Resource Management -->
+                <tr> 
+                  <td class="leftnavBody" valign="top"><img src="images/nav/spacer.gif" alt="" width="15" height="1"></td>
+                  <td class="navThemes" width="149"><a href="http://www.gov.bc.ca/citz/" class="navThemes">Ministry of Citizens' Services and Open Government</a></td>
+                </tr>
+
+
+               <!-- spacer -->
+               <tr>
+                   <td colspan="2" ><img src="images/nav/spacer.gif" width="164" height="11"></td> <!-- NAV SPACER //-->
+                </tr>
+
+              <tr> 
+                <td class="leftnavBody" valign="top"><img src="images/nav/spacer.gif" alt="" width="15" height="10"></td>
+                <td class="navThemes" width="149">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td colspan="2"><img src="images/nav/n_bg_mtn.gif" width="164" height="10" alt="mountain view"></td>
+              </tr>
+            </table>
+            <!--PROGRAM SUBNAV START //-->
+        
+        
+        </td>
+    </tr>
+
+
+
+</table>
+
+<!-- SERVICE tile sample end -->
+                                </td>
+                            </tr>
+
+                            <!-- nav -->
+                            <tr height="0">
+                                <td height="0">
+                                    
+
+
+
+
+
+
+
+
+<!-- SAMPLE_NAV tile -->
+
+<table width="165" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999">
+	<tr>
+		<td>
+        <table width="164" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+          <tr>
+            <td bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+            <td height="15" colspan="4"></td>
+          </tr>
+
+<!-- START customizable content -->
+
+          <tr>
+            <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="15" height="14"></td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+          </tr>
+	      <!-- Help -->
+          <tr>
+            <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+            <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+            <td valign="center">
+	      	
+      		
+				<a href="javascript:" onclick="openwindow('help/dis/index.html', 'helpWin'); return false;" class="stepnavProgNA">Help</a>
+      		
+            </td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+          </tr>
+          
+                    
+          
+    <!-- spacer -->
+    <tr>
+        <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="5"></td>
+    </tr>
+		  <!-- RSS -->
+          <tr>
+            <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+            <td valign="top"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+            <td valign="top"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+            <td valign="top">
+				<a href="http://www.data.gov.bc.ca/dbc/geo/geometadata/rss.page?" class="stepnavProgNA">New Metadata Content</a>
+            </td>
+
+          </tr>
+
+          <!-- What\u2019s New & Notices -->
+
+          <tr>
+            <td bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+            <td height="15" colspan="4"></td>
+          </tr>
+
+
+	      <!-- Title: Discovery -->
+          <tr>
+            <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="15" height="14"></td>
+            <td valign="center" colspan="2" class="stepnavTitle" height="20">RSS Feeds</td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+          </tr>
+
+	      <!-- Option: New -->
+          <tr>
+            <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+            <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+            <td valign="middle">
+            				<a href="https://apps.gov.bc.ca/pub/geometadata/georss.do" class="stepnavProgNA"><img src="images/feed-icon-14x14.gif" border=0>&nbsp;New Records</a>
+            </td>            
+          </tr>  
+
+	      <!-- Option: Updates -->
+          <tr>
+            <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+            <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+            <td  valign="center">
+            				<a href="https://apps.gov.bc.ca/pub/geometadata/georssupdates.do" class="stepnavProgNA"><img src="images/feed-icon-14x14.gif" border=0>&nbsp;Updated Records</a>
+            </td>            
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+          </tr>  
+          <tr>
+            <td bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+            <td height="15" colspan="4"></td>
+          </tr>
+	      <!-- Title: Discovery -->
+          <tr>
+            <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="15" height="14"></td>
+            <td valign="center" colspan="2" class="stepnavTitle" height="20">Data Discovery</td>
+            <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+          </tr>
+
+
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+                                    
+
+
+
+
+
+
+
+
+
+
+<!-- Option: Home -->
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+    <td valign="center" ><a href="/pub/geometadata/home.do;jsessionid=F298F596A62437B9ABB1F55414E28E39.node1" class="stepnavProgNA">Search</a></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+
+<!-- Option: Search -->
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+    <td valign="center" ><a href="/pub/geometadata/advancedSearch.do;jsessionid=F298F596A62437B9ABB1F55414E28E39.node1?command=new" class="stepnavProgNA">Advanced Search</a></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+<!-- Option: Browse -->
+<tr>
+  <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+  <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+  <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+  <td valign="center" ><a href="/pub/geometadata/tree.do;jsessionid=F298F596A62437B9ABB1F55414E28E39.node1" class="stepnavProgNA">Browse</a></td>
+  <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+
+<!-- Option: Configure Results -->
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+    <td valign="center" ><a href="/pub/geometadata/configureresults.do;jsessionid=F298F596A62437B9ABB1F55414E28E39.node1" class="stepnavProgNA">Configure Results</a></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+<!-- Option: Glossary -->
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+    <td valign="center" ><a href="/pub/geometadata/glossary.do;jsessionid=F298F596A62437B9ABB1F55414E28E39.node1?prefix=A" class="stepnavProgNA">Glossary</a></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+
+
+<!-- Option: View Profile -->
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+    <td valign="center"><a href="http://www.data.gov.bc.ca/dbc/geo/geometadata/profile.page?" class="stepnavProgNA">View Metadata Profile</a></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+
+<!-- END customizable content -->
+
+<tr>
+    <td bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td height="15" colspan="4"></td>
+</tr>
+<!-- Title: Access -->
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="15" height="14"></td>
+    <td valign="center" colspan="2" class="stepnavTitle" height="20">Access</td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+        
+<td valign="center" ><a href="javascript:callUrlWithReturn('secure/login.jsp')" title="Login to contribute metadata and see secure records" class="stepnavProgNA">Login</a></td>
+
+<td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+        
+    <td valign="center" class="stepnavProgNA"><font color="#c0c0c0">Logout</font></a></td>
+        
+<td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+
+
+<tr>
+    <td valign="center" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="15"></td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+    <td valign="center"><img src="images/nav/nLeft_blue_arrow.gif" width="6" height="8" alt="done"></td>
+    <td valign="center">
+        <a href="mailto:NRSApplications@gov.bc.ca" class="stepnavProgNA">Contact Us</a>
+    </td>
+    <td valign="center"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+<!-- NAV FOOTER -->
+<tr>
+    <td bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="25"></td>
+    <td><img src="images/nav/spacer.gif" width="15" height="8"></td>
+    <td><img src="images/nav/spacer.gif" width="15" height="8"></td>
+    <td><img src="images/nav/spacer.gif" width="118" height="5"></td>
+    <td><img src="images/nav/spacer.gif" width="15" height="8"></td>
+</tr>
+<tr>
+    <td colspan="5" bgcolor="#999999"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+</table>
+
+<!-- SAMPLE_NAV tile end -->
+
+                                </td>
+                            </tr>
+
+                            <!-- exit -->
+                            <tr height="0">
+                                <td height="0">
+                                    
+
+
+
+
+
+
+<!-- EXIT tile sample -->
+
+
+
+<!-- EXIT E-SERVICE BUTTON START //-->
+<table height="0" width="165" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999">
+    <tr>
+        <td>
+             <table width="164" border="0" cellspacing="0" cellpadding="0">
+               <tr> 
+                 <td colspan="2"><a href="http://www.data.gov.bc.ca/dbc/geo/index.page"><img src="images/b_exit_service.gif" alt="Exit this e-service" width="164" height="36" border="0"></a></td>
+               </tr>
+             </table>
+        </td>
+    </tr>
+</table>
+ <!-- EXIT E-SERVICE BUTTON  END //-->
+
+
+
+
+
+                                </td>
+                            </tr>
+
+                            <!-- (expanding void) -->
+                            <tr height="100%">
+                                <td height="100%">
+                                    
+
+
+
+
+
+
+<!-- START VOID TILE -->
+
+<table width="165" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" height="100%">
+	<tr>
+		<td>
+	
+        <table width="164" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" height="100%">
+        	 <tr height="100%">
+        	 	<td height="100%">
+                    <img src="images/spacer_wh.gif" width="1" height="100%"/>
+        	 	</td>
+        	 </tr>
+        </table>
+        
+		</td>
+	</tr>
+</table>
+<!-- END VOID TILE -->
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+
+                    <!-- /left-side panel -->
+
+
+                    <!-- bread + body -->
+                    <td height="100%" rowspan="0">
+
+                        <table height="100%" cellspacing="0" cellpadding="0" border="0">
+
+
+                            <!-- breadcrumbs -->
+                            <tr height="0">
+                                <td height="0">
+                                    
+
+
+<!-- BREADCRUMB tile sample -->
+
+
+<!-- START tile layout -->
+
+<table width="656" height="33" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+       <td background="images/nav/greyline_pixel.gif" height="1" colspan="2"><img src="images/nav/spacer.gif" width="656" height="1" ></td>
+    </tr>
+    <tr valign="middle">
+        <td><img src="images/nav/spacer.gif" width="10" height="1"></td>
+      <td>
+
+
+        <!-- START customizable tile content -->
+
+
+      	<a href="http://www.gov.bc.ca/" class="breadcrumb">B.C. Home</a>&nbsp;
+      	<span class="breadcrumb">&#155;</span>&nbsp;
+      	<a href="http://www.data.gov.bc.ca" class="breadcrumb">DataBC</a>&nbsp;
+      	<span class="breadcrumb">&#155;</span>&nbsp;
+        <span class="breadcrumb"><a href="http://www.data.gov.bc.ca/dbc/geo/index.page">Geographic Services</a></span>
+
+
+        <!-- END customizable tile content -->
+
+
+        </td>
+    </tr>
+
+    <!-- this bottom bordering line is intended to line up with the underline
+         under "B.C. Home" link in the Service menu.  if your breadcrumbs cause
+         wrapping, you may want to omit it for aesthetic reasons
+    -->
+    <tr>
+       <td background="images/nav/greyline_pixel.gif" height="1" colspan="2"><img src="images/nav/spacer.gif" width="656" height="1" ></td>
+    </tr>
+
+
+
+</table>
+
+<!-- END tile layout -->
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td valign="top"><img src="images/nav/shadow_horiz.gif" width="656" height="11"></td>
+                            </tr>
+                            <!-- body title graphic -->
+                            <tr height="0">
+                                <td height="0" nowrap>
+                                    
+
+
+
+
+
+
+
+<div style="padding-left: 5px; padding-right: 5px; width: 656px;">
+   <table>
+      <tr>
+         <td>
+            <p class="programSubheadHome">
+      			Geographic Data Discovery Service
+               <!--span class="navBodyRed">(Development Version)</span -->
+            </p>
+         </td>
+      </tr>
+   </table>
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+         <td background="images/ln_dot_grey_wh.gif"/></td>
+      </tr>
+      <tr>
+         <td class="body"><img src="images/spacer.gif" width="575" height="2"></td>
+      </tr>
+      <tr>
+         <td background="images/ln_dot_grey_wh.gif"/></td>
+      </tr>
+      <tr>
+         <td><img src="images/spacer.gif" width="575" height="15"></td>
+      </tr>
+   </table>
+</div>
+
+                                </td>
+                            </tr>
+
+                            <!-- errors and messages -->
+                            <tr height="0">
+                                <td height="0">
+                                    
+
+<!-- ERRORS_AND_MESSAGES tile sample -->
+
+
+<!-- START tile layout -->
+<!--
+<table width="600" height="0" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="20">
+          &nbsp;
+        </td>
+      <td class="boxTitle">
+          
+      </td>
+    </tr>
+    <tr>
+        <td width="20">
+          &nbsp;
+        </td>
+
+      <td class="boxTitle">
+        
+      </td>
+    </tr>
+</table>
+-->
+<!-- END tile layout -->
+                                </td>
+                            </tr>
+
+                            <!-- body -->
+                            <tr height="100%" valign="top">
+                                <td height="100%" width="100%" valign="top">
+                                    <table height="100%" width="100%" cellspacing="0" cellpadding="5" border="0">
+                                        <tr valign="top">
+                                            <td valign="top">
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HELP icon -->
+<table border="0" cellpadding="0" cellspacing="0" style="float:right">
+  <tr>
+    <td valign="middle">
+      
+      
+         <a href="javascript:" onclick="openwindow('help/dis/metadata_detail.html', 'helpWin'); return false;"><img src="images/contexthelp.gif" border="0" alt="help" style="float:left;" /></a>
+      
+   </td>
+  </tr>
+</table>
+<!-- Page Description -->
+<table  width="95%" border=0 cellpadding="0" cellspacing="0">
+	<tr><td class="body"><p class="progFormSectTitle">Metadata Details</p></td>
+	<td class="body" align="left">
+		<form name="RecordForm" method="post" action="/pub/geometadata/metadataDetail.do;jsessionid=F298F596A62437B9ABB1F55414E28E39.node1">
+			<input type="hidden" name="from" value="">
+			<input type="hidden" name="recordSet" value="ISO19115">
+			<input type="hidden" name="recordUID" value="57059">
+			Choose a view:&nbsp;
+			<select name="view" onchange="this.form.submit();"><option value="Brief Highlights" selected="selected">Brief Highlights</option>
+<option value="GIS User">GIS User</option>
+<option value="standard">standard</option></select>
+		</form>
+	</td></tr>
+	<tr><td>&nbsp;</td></tr>
+</table>
+
+<table width="95%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="right" valign="center">
+         
+		</td>
+		<td align="right" valign="center">
+
+	     
+        <a href="javascript:viewFootPrint('-139.5,48.0,-113.5,60.0&amp;w=400&amp;h=400');"><img border="0" src="images/discovery/b_footprint.gif"/></a>
+	     
+
+		<a href="/pub/geometadata/printable.do"><img border="0" src="images/discovery/b_printable.gif"/></a>
+		<a href="/pub/geometadata/viewxml.do?recordSetName=ISO19115&UIDs=57059&transform=19115" target="_new"><img border="0" src="images/discovery/b_xml.gif"/></a>
+	     
+			<a href="javaScript:orderItem('https://apps.gov.bc.ca/pub/dwds/addProductsFromExternalApplication.do?productTypeId=0&amp;productId=12420');"><img border="0" src="images/discovery/b_order.gif"/></a>
+	     
+       
+        
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="body">
+			&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center" class="body">
+        	
+				<a href="/pub/geometadata/metadataDetail.do;jsessionid=F298F596A62437B9ABB1F55414E28E39.node1#Identification+Information">Identification</a>&nbsp;&nbsp;
+			
+        	
+        	
+        	
+        	
+        	
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="body">
+			&nbsp;
+		</td>
+	</tr>
+</table>
+
+
+
+
+    <div class="contentBody" align="center">
+      <table width="535" border="0">
+        <tbody>
+                  <tr class='lineItemLight'>
+            <td valign='top' class='propertyGroup' colspan='2'><a name="Identification+Information"><span class="elementLabelE"  onMouseover="ddrivetip('General descriptive and categorical metadata elements that are used to uniquely identify a resource','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Identification Information</span></td>
+          </tr>
+</table>
+<span id='details0'>
+<table width='535' border='0'>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The name of the dataset or resource (eg. Dataset Vegetation Cover or packaged product Groundwater Aquifers and Wells). Names must be entered so as to be distinct from other similar datasets.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Title</span></td>
+            <td valign='top' class='value'><b><font size="3">Fire Locations - Current</font></b></td>
+          </tr>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('Description of the data (or other resource) this metadata records refers to.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Description</span></td>
+            <td valign='top' class='value'><font size="3">Wildfire location points for the current fire season.  Supplied through various sources. Not to be used for legal purposes. This data may not reflect the most current fire situation.  The data is refreshed nightly however individual fire update frequency will vary.     These points are rolled over to Historical Fire Points on April 1 of each year</font></td>
+          </tr>
+          <tr class='lineItemLight'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The organizational unit name of the custodial organization. The ministry&amp;#39;s custodial responsibility lies with the Director or most senior official.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Data Custodian Organization</span></td>
+            <td valign='top' class='value'>BCGOV FOR Wildfire Management Branch</td>
+          </tr>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The date that the dataset was created, published, revised, archived, or destroyed. The date of data is directly related to the Date Type in the above field. Expressed in the format (yyyyMMdd). Where multiple Date Types exist, a related Date of Data must be populated for each Date Type.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Date of Data</span></td>
+            <td valign='top' class='value'>2009-07-31&nbsp; (creation)</td>
+          </tr>
+          <tr class='lineItemLight'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('An indication of the status of the dataset (e.g. planned, completed, under development)','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Resource Status</span></td>
+            <td valign='top' class='value'>onGoing</td>
+          </tr>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('A description of the frequency with which changes are made to the dataset.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Update Cycle</span></td>
+            <td valign='top' class='value'>daily</td>
+          </tr>
+          <tr class='lineItemLight'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('For data to be shown as &amp;quot;orderable&amp;quot;, the System must be set to LRDW and the Unique ID must be the product ID from the Distribution Service.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">System</span></td>
+            <td valign='top' class='value'>LRDW</td>
+          </tr>
+          <tr class='lineItemLight'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('General representation of the information in a resource, such as a theme, feature type, or packaged product. Product Type must be set to &amp;quot;Feature&amp;quot; for every spatial database layer. The record must have the database layer name entered in the field &amp;quot;Feature Type #1, Feature Type Name&amp;quot;.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Product Type</span></td>
+            <td valign='top' class='value'>Feature Type</td>
+          </tr>
+          <tr class='lineItemDark'>
+<td valign='top' class='propertySubgroup' colspan='2'><span class="elementLabelE"  onMouseover="ddrivetip('Identification of and means of communicating with person(s) and organization(s) using the resource(s)','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Contact</span> #1</td>
+          </tr>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The name of the person who may be contacted about the data source.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Contact Name</span></td>
+            <td valign='top' class='value'>Jennifer Naylor</td>
+          </tr>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The organization to which the delegate belongs.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Contact Organization</span></td>
+            <td valign='top' class='value'>BCGOV FLNRO Wildfire Management Branch HQ</td>
+          </tr>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The electronic mail address of the contact position.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Email Address</span></td>
+            <td valign='top' class='value'><a href="mailto:Jennifer.Naylor@gov.bc.ca">Jennifer.Naylor@gov.bc.ca</a><br></td>
+          </tr>
+          <tr class='lineItemDark'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The telephone number by which individuals can speak to the responsible individual or organization (including area code).','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Phone Number</span></td>
+            <td valign='top' class='value'>250 286-9367<br></td>
+          </tr>
+<tr><td colspan=2><table class='body' border=1 width="100%"><tr class='lineItemDark'><td align='center' class='topcategorytitle'>Access</td><td align='center' class='topcategorytitle'>Yes or No</td><td align='center' class='topcategorytitle'>Business Impact</td><td align='center' class='topcategorytitle'>Comments</td></tr><tr><td class='property' onMouseover="ddrivetip('Freely viewable means that it can be displayed to the public using iMap or other web mapping applications.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">1) Is this data freely viewable by the public?</td><td align='center' class='value'>Yes</td><td align='center' class='value'>Low</td><td align='left' class='value'>&nbsp;</td></tr><tr><td class='property' onMouseover="ddrivetip('The answer to this question should identify if any data (or portions thereof) needs to be limited to Government or lower in the audience hierarchy (e.g. business area). Questions 8 - 10 will draw out the detail when a &amp;#39;&amp;#39;No&amp;#39;&amp;#39; response is given.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">2) Is this data freely downloadable by the public?</td><td align='center' class='value'>Yes</td><td align='center' class='value'>Yes</td><td align='left' class='value'>&nbsp;</td></tr><tr><td class='property' onMouseover="ddrivetip('A &amp;#39;Yes&amp;#39; response indicates that the data is available under the Open Government License ? British Columbia. (http://www.data.gov.bc.ca/local/dbc/docs/license/OGL-vbc2.0.pdf) A &amp;#39;No&amp;#39; response should be described in the comments section.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">4) Is this dataset available under the Open Government License ? British Columbia?</td><td align='center' class='value'>Yes</td><td align='center' class='value'>Low</td><td align='left' class='value'>&nbsp;</td></tr></table></td></tr><b></b>          <tr class='lineItemLight'>
+<td valign='top' class='propertySubgroup' colspan='2'><span class="elementLabelE"  onMouseover="ddrivetip('Information on the feature types occurring in the dataset.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Feature Types</span> #1</td>
+          </tr>
+          <tr class='lineItemLight'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The object name of the Feature Type (ie. WHSE_FOREST_VEGETATION.RES_BIOGEOCLIMATIC)','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Feature Type Name</span></td>
+            <td valign='top' class='value'><FORM name=form onsubmit="window.open('','popup','width=780,height=600,scrollbars=yes')" action="showFeatureDataDictionary.do" method="post" target="popup"><input type="hidden" name="feature" value="WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_PNTS_SP" /><input type="hidden" name="recordUID" value="57059" /><INPUT TYPE="image" border="0" SRC="/pub/geometadata/images/btn-datadictionary.gif" /></form>WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_PNTS_SP</td>
+          </tr>
+</table>
+</span>
+<table width='535' border='0'>
+          <tr class='lineItemDark'>
+            <td valign='top' class='propertyGroup' colspan='2'><a name="Metadata+Information"><span class="elementLabelE"  onMouseover="ddrivetip('Unique identification and descriptive information for the metadata.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Metadata Information</span></td>
+          </tr>
+</table>
+<span id='details1'>
+<table width='535' border='0'>
+          <tr class='lineItemLight'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The date the metadata was last updated.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Metadata Date</span></td>
+            <td valign='top' class='value'>2012-09-10</td>
+          </tr>
+          <tr class='lineItemLight'>
+            <td valign='top' class='property'><span class="elementLabelE"  onMouseover="ddrivetip('The URL for this metadata record.','#DFDFFF', 300)"; onMouseout="hideddrivetip()">Unique Metadata URL</span></td>
+            <td valign='top' class='value'><a href="http://apps.gov.bc.ca/pub/geometadata/metadataDetail.do?recordUID=57059&recordSet=ISO19115" target='_new'>http://apps.gov.bc.ca/pub/geometadata/metadataDetail.do?recordUID=57059&amp;recordSet=ISO19115</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div align="center">
+      <table width="535" cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+      		<td align="left" valign="center">
+		         
+            </td>
+            <td align="left">
+              <a href="/pub/geometadata/viewxml.do?recordSetName=ISO19115&UIDs=57059"  target="_new">
+                 <img alt="view checked as XML" border=0 src="images/discovery/b_view_as_xml.gif" />
+              </a>
+            </td>
+            <td align="right">
+              <a href="/pub/geometadata/briefresults.do?command=refresh">
+                 <img alt="back to search results" border=0 src="images/discovery/b_backToSearchResults.gif" />
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+<script>
+function featurePop(feature, recordUID) {
+	var win = window.open("/pub/geometadata/showFeatureDataDictionary.do?feature=" + feature + "&recordUID=" + recordUID, "Feature", "width=780,height=600,scrollbars=1");
+	//win.focus();
+}
+
+function orderItem(pOrderURL) {
+	window.open(pOrderURL, "distributionWin");
+}
+
+function viewFootPrint(pURL){
+	lURL = "http://webmaps.gov.bc.ca/imf5/ext/bcgov/common/indexmap.jsp?box="+pURL;
+	window.open(lURL,"footprint", "toolbar=no, location=no, scrollbars=yes, resizable=yes, width=450, height=450");
+
+}
+//--------------------------------------------
+// submit form to save the record
+//--------------------------------------------
+function saveRecord() {
+	var lURL = "/pub/geometadata/savedResults.do?saverecords=true&savefrom=detail&saverecord=ISO19115_57059";
+	window.location.replace(lURL);
+}
+
+//Displays an animated gif while processing
+function showProcessingGif(id) {
+	
+		var imageOffset = 50; //fine tuning for the image position
+		var elem = document.getElementById(id)
+		elem.style.top = document.body.scrollTop+(document.body.clientHeight/2)-imageOffset ;
+		elem.style.visibility = "visible";
+		elem.style.display = "block";
+	
+}//end showMe
+
+</script>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </td>
+
+                    <!-- /bread+body -->
+
+
+                </tr>
+
+                <!-- footer -->
+                <tr height="0">
+                    <td height="0" colspan="2">
+                        
+
+
+
+
+
+<!-- FOOTER tile sample -->
+
+<!-- START tile layout -->
+
+<table width="760" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td colspan="5"><img src="images/nav/spacer.gif" width="40" height="40"></td>
+	</tr>
+	<tr bgcolor="#999999">
+		<td colspan="5"><img src="images/nav/spacer.gif" width="1" height="1"></td>
+	</tr>
+	<tr>
+
+<!-- START custom content -->
+
+		<td class="footer">Release Geodata Discovery Service 3.0.2</td>
+
+<!-- END custom content -->
+
+
+		<td><a href="http://www.gov.bc.ca/com/copy/"><img src="images/nav/ftrCopyright.gif" width="95" height="19" alt="Copyright" border="0"></a></td>
+		<td><a href="http://www.gov.bc.ca/com/disc/"><img src="images/nav/ftrDisclaimer.gif" width="99" height="19" border="0" alt="Disclaimer"></a></td>
+		<td><a href="http://www.gov.bc.ca/com/priv/"><img src="images/nav/ftrPrivacy.gif" width="76" height="19" alt="Privacy" border="0"></a></td>
+		<td><a href="http://www.gov.bc.ca/com/accessibility/"><img src="images/nav/ftrAccessibility.gif" width="108" height="19" border="0" alt="Accessibility"></a></td>
+	</tr>
+	<tr>
+		<td><img src="images/nav/spacer.gif" width="382" height="30"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table> 
+<!-- END tile layout -->
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push (['_setAccount', 'UA-7579094-1']);
+				_gaq.push (['_gat._anonymizeIp']);
+				_gaq.push (['_trackPageview']);
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();				
+
+       </script>
+
+
+    </body>
+    <script>
+        function openwindow(address) {
+            var op_tool  = 0;
+            var op_loc_box  = 0;
+            var op_dir  = 0;
+            var op_stat  = 0;
+            var op_menu  = 0;
+            var op_scroll  = 1;
+            var op_resize  = 1;
+            var op_wid  = 500;
+            var op_heigh = 400;
+            var option = "toolbar="+ op_tool +",location="+ op_loc_box +",directories="
+                + op_dir +",status="+ op_stat +",menubar="+ op_menu +",scrollbars="
+                + op_scroll +",resizable="  + op_resize +",width=" + op_wid +",height="+ op_heigh;
+            var win3 = window.open("", "popwindow", option);
+            win3.focus();
+            var win4 = window.open(address, "popwindow");
+            win4.focus();
+        }
+
+        function getScrollPos(formObj) {
+            if ( document.all  )
+            // IE version
+                formObj.scrollPos.value = document.body.scrollTop;
+            else
+            // Netscape version
+                formObj.scrollPos.value = window.pageYOffset;
+        }
+
+        function scrollToPosition(t) {
+            if (t != null) {
+                window.scrollTo(1, t);
+            }
+        }
+    </script>
+
+</html>
