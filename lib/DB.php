@@ -23,8 +23,8 @@ class DB {
 	 $collection string - the collection name
 	 $projection array - key value  
 	 */
-	public function findAll($collection, $projection = "") {
-		return $this->db->$collection->find(array(),$projection);
+	public function findAll($collection, $projection = "", $query = array()) {
+		return $this->db->$collection->find($query,$projection);
 	}
 	
 	

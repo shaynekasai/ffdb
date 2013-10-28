@@ -11,9 +11,9 @@
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.load.min.js"></script>
 		
 		<script type="text/javascript">
-			head.js("assets/js/jquery-1.10.1.min.js", "assets/js/underscore-min.js", "assets/js/backbone-min.js", "assets/js/interface.js", function() {});
+			head.js("assets/js/jquery-1.10.1.min.js", "assets/js/underscore-min.js", "assets/js/backbone-min.js", "assets/js/interface.js", "assets/js/d3.v3.min.js", function() {});
 		</script>
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"/>
+		<link rel="stylesheet" href="assets/css/pure-min.css"/>
 		<link rel="stylesheet" href="assets/css/interface.css"/>
 		
 	</head>

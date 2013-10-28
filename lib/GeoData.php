@@ -11,7 +11,7 @@ class GeoData {
 
 
 	function __construct() {
-		$this->objDB = new DB();
+		$this->objDB = new DB(); // temporary for now but we gatta move this out
 		$this->objDB->setDatabase("ffdb");
 	}
 	
