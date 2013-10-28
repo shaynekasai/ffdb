@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * TODO: 
+ * - need to turn this into a class... this is really quick and dirty, sorry!
+ * - thinking about taking out subdoc as well in mongo and using the obj id instead... since the govt provides it in two files anyways
+ */
 require_once("lib/DB.php");
 
 $objDB = new DB();
@@ -7,7 +13,6 @@ $objDB->setDatabase("ffdb");
 const WEATHER_DATA_FOLDER = "";
 const FIRE_DATA    = "data/BCGW_78757263_13824546384_8968/C_FIRE_PNT/C_FIRE_PNT.csv";
 const FIRE_STATIONS       = "data/crmp_network_geoserver.csv";
-
 
 // this is returned as a nested document
 function getRawWeatherData($climateId) {
